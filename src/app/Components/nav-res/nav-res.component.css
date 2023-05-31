@@ -1,0 +1,11 @@
+li{
+    color: aliceblue;
+    text-align: center;
+    display: inline;
+    padding: 5px;
+}
+.nav-bar{
+    background-color:grey;
+    font-size: 18px;
+    font-weight: 700;
+}

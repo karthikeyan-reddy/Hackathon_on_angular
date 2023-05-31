@@ -1,0 +1,18 @@
+.card{
+    display: inline-block;
+    width:30%;
+    text-align: center;
+    border: 2px solid grey;
+    box-shadow: 3px 3px rgb(244, 113, 135);
+    vertical-align: top;
+}
+.cards
+{
+    position: sticky;
+    margin-right: 25px;
+    border: 2px solid black;
+    box-shadow: 2px 2px grey;
+    text-align: center;
+    background-color: darkorange;
+    border-radius: 5px;
+}

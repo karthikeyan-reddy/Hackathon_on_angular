@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class RestaurantService {
-
+ add : number =0;
   url: string = "http://localhost:5231/hotelcomponents";
  
   selectedItems : Restaurant[] = [];
@@ -16,14 +16,12 @@ export class RestaurantService {
   public getAllMenu() : Observable<Restaurant[]> {
     return this.http.get<Restaurant[]>(this.url);
   }
-
  public addToCheckout(resource : Restaurant)  {
  
     return this.selectedItems.push(resource);
  }
 
- public GetCheckout() : Restaurant[] {
- 
+ public GetCheckout() {
   return this.selectedItems;
 }
 

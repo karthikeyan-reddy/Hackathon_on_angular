@@ -1,1 +1,18 @@
-<p>checkout works!</p>
+<div class="card" *ngFor = "let items of items">
+    <img src="{{items.image}}" style="width: 50%;height: 50%;"/>
+    <h2>{{items.itemName}}</h2>
+    <p>{{items.price | currency:'INR'}}</p>
+    <button  class="btn btn-success">Place Order</button>
+</div>
+<div class="cards">
+    <p style="font-weight: 600;">Amount : {{price}} </p>
+    <p style="font-weight: 600;">Gst (18%) : {{Gst | number:'1.0-1'}}</p>
+    <p style="font-weight: 800;">Total Price = {{total}}</p>
+</div>
+<div>
+    <h3>Pay Through</h3>
+    <p><i class="fa fa-credit-card"></i>Credit Card (3% tax will be added)</p>
+    <p><i class="fa fa-credit-card"></i>Debit Card</p>
+    <p><i class="fa fa-mobile"></i>UPI</p>
+    <p><i class="fa fa-laptop"></i>Net Banking</p>
+</div>

@@ -8,7 +8,7 @@ import { RestaurantService } from "src/app/Models/restaurant.service";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  restaurants: Restaurant[] = [];
+  menuitems: Restaurant[] = [];
   number :number = 0;
   constructor(private restroService:RestaurantService ) {}
 
@@ -16,17 +16,15 @@ export class HomeComponent implements OnInit {
 
     this.restroService.getAllMenu().subscribe((data : Restaurant[]) => {
 
-      this.restaurants = data;
+      this.menuitems = data;
 
     });
 
   }
-
-  addToCheckout(restaurant: any) {
-    
-    this.number = this.number +1;
-    alert(restaurant.itemname+' Added to Checkout ');
-    this.restroService.addToCheckout(restaurant);
-
+ Add(items : Restaurant)
+  {
+    alert(items.itemName+" Added");
+    this.number = this.number+1;
+    this.restroService.addToCheckout(items);
   }
 }

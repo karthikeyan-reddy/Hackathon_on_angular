@@ -1,23 +1,8 @@
-
-<div class="container">
-    <div class="row" *ngFor="let restaurant of restaurants">
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body" >
-                <img src="{{ restaurant.image }}" alt="{{ restaurant.itemName }}" class="img" />
-              <h5 class="card-title">{{ restaurant.itemName }}</h5>
-              <p class="card-text"> {{ restaurant.itemName }} - {{ restaurant.price }}</p>
-              <p class="card-text"> {{ restaurant.itemName}} - ${{ restaurant.price }}</p>
-              <button class="btn btn-primary" (click)="addToCheckout(restaurant)">Add</button>
-            </div>
-           
-          </div>
-         
-        </div>
-        
-      </div>
-    </div>
-    
-    <div><h1>Number of items added to Check Out : {{number}}</h1>
-        <a class="btn btn-primary"  routerLink="/restaurant/checkout">Proceed</a>
-    </div>
+<div style="float: right;border: 5px solid greenyellow; border-radius: 5px;font-weight: 800;"><i class="fa fa-cart-shopping">Cart items : {{number}}</i></div>
+<div class="card" *ngFor = "let items of menuitems">
+      <img src="{{items.image}}" style="width: 50%;height: 50%;"/>
+      <h2>{{items.itemName}}</h2>
+      <p>{{items.description}}</p>
+      <p>{{items.price | currency:'INR'}}</p>
+      <button (click)="Add(items)" class="btn btn-success">Add To Cart</button>
+</div>
